@@ -3,7 +3,6 @@
 with pkgs; mkShell {
   packages = [
     terraform
-    terraform-providers.azurerm
     azure-cli
     jq
   ];
