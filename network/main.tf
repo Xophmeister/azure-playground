@@ -14,9 +14,9 @@ resource "azurerm_subnet" "subnet" {
 }
 
 resource "azurerm_public_ip" "ip" {
-  count               = var.ip-count
   name                = "${var.name}-ip-${format("%02d", count.index + 1)}"
   location            = var.group.location
   resource_group_name = var.group.name
   allocation_method   = "Dynamic"
+  count               = var.ip-count
 }
