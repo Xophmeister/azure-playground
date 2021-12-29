@@ -12,5 +12,7 @@ with pkgs; mkShell {
 
     [[ -e "$AZURERC" ]] || ./create-azure-sp.sh
     source "$AZURERC"
+
+    terraform init
   '';
 }
