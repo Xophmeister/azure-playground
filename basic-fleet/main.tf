@@ -27,6 +27,6 @@ module "fleet" {
   count = var.instances
 }
 
-output instances {
+output "instances" {
   value = module.fleet[*].instance
 }
