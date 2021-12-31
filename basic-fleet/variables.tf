@@ -1,7 +1,7 @@
 variable prefix {
   type        = string
   description = "Namespace"
-  default     = "playground"
+  default     = "fleet"
 }
 
 variable location {
@@ -20,4 +20,10 @@ variable public-key {
   type        = string
   description = "Path to SSH RSA public key"
   default     = "~/.ssh/id_rsa.pub"
+}
+
+variable machine-size {
+  type        = string
+  description = "Azure VM size"
+  default     = "Standard_DS1_v2"
 }
